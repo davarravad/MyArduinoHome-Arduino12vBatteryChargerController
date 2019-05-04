@@ -446,7 +446,7 @@ void runCharger(){
     // Turn the charger off to get voltage
     digitalWrite(outPutPin1, HIGH);
 	// Add delay for reset
-    delay(500);
+    delay(2000);
     // Get data from Voltage Meters
     value1 = analogRead(voltage1);
     vout1 = (value1 * 5.0) / 1024.0; // see text
@@ -465,7 +465,7 @@ void runCharger(){
     lcd.print("%");
     buttonLongPress = false;
     // Delay for button press
-    delay(3000);
+    delay(500);
     // Set Current Charge Cycle Status
     // Base weather on or off by the amount of voltage to battery
     if(chargeCycleStatus == 1){
